@@ -20,5 +20,8 @@ const StudentList = () => {
    const handleEdit = (id) => {
     navigate(`/students/edit/${id}`);
   };
+   const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 }
 export default StudentList;
