@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-// const TeacherForm = () => {
-//   const [name, setName] = useState('');
-//   const [subject, setSubject] = useState('');
-//   const navigate = useNavigate();
-//   const { id } = useParams();
-//   const isEdit = Boolean(id);
+ const TeacherForm = () => {
+   const [name, setName] = useState('');
+   const [subject, setSubject] = useState('');
+   const navigate = useNavigate();
+   const { id } = useParams();
+   const isEdit = Boolean(id);
+ };
 
 //     useEffect(() => {
 //         if (isEdit) {
-//       fetch(`http:localhost:3000/teachers/${id}`)
+//       fetch(`http:localhostmypc
+// :3000/teachers/${id}`)
 //         .then((res) => res.json())
 //         .then((data) => {
 //           setName(data.name);
