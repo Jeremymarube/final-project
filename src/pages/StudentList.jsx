@@ -23,5 +23,8 @@ const StudentList = () => {
    const filteredStudents = students.filter((student) =>
     student.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+   return (
+    <div style={{ padding: '20px' }}></div>
+   )
 }
 export default StudentList;
