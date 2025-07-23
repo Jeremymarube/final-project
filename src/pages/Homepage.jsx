@@ -61,6 +61,23 @@ const SummaryCard = ({ title, count, color }) => (
   </div>
 );
 
-
+// Detail Card Component
+const DetailCard = ({ title, data, getLine }) => (
+  <div style={{
+    background: '#f9f9f9',
+    padding: '20px',
+    borderRadius: '10px',
+    flex: '1',
+    minWidth: '250px',
+    boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+  }}>
+    <h3>{title}</h3>
+    <ul style={{ marginTop: '10px' }}>
+      {data.slice(0, 5).map(item => (
+        <li key={item.id}>{getLine(item)}</li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default Homepage;
