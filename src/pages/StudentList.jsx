@@ -26,6 +26,10 @@ const StudentList = () => {
    return (
     <div style={{ padding: '20px' }}>
     <h2>Students</h2>
+    <input
+        type="text"
+        placeholder="Search by name..."
+        />
     </div>
    )
 }
