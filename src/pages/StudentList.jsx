@@ -31,6 +31,7 @@ const StudentList = () => {
         placeholder="Search by name..."
          value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        style={{ marginBottom: '10px', padding: '5px', width: '200px' }}
         />
     </div>
    )
