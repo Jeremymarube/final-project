@@ -28,3 +28,23 @@ const TeacherForm = () => {
       : "http://localhost:3000/teachers";
 
     const method = isEdit ? 'PATCH' : 'POST';
+
+    fetch(url, {
+        method,
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(teacher),
+    }).then(() => navigate('/teachers'));
+};
+
+    return (
+        <form onSubmit={handleSubmit}>
+      <h2>{isEdit ? 'Edit' : 'Add'} Teacher</h2>
+      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" required />
+      <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Subject" required />
+      <button type="submit">Save</button>
+    </form>
+  );
+};
+
+export default TeacherForm;
+    
