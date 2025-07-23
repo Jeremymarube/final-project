@@ -24,7 +24,9 @@ const StudentList = () => {
     student.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
    return (
-    <div style={{ padding: '20px' }}></div>
+    <div style={{ padding: '20px' }}>
+    <h2>Students</h2>
+    </div>
    )
 }
 export default StudentList;
