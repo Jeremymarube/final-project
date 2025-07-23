@@ -36,7 +36,19 @@ const StudentList = () => {
         <button onClick={() => navigate('/students/new')} style={{ marginLeft: '10px' }}>
         Add Student
       </button>
+       <ul style={{ listStyle: 'none', padding: 0 }}>
+        {filteredStudents.map((student) => (
+          <li key={student.id} style={{ margin: '10px 0' }}>
+            <strong>{student.name}</strong> - Age: {student.age}
+            <div style={{ marginTop: '5px' }}>
+              <button onClick={() => handleEdit(student.id)} style={{ marginRight: '10px' }}>
+                Edit
+              </button>
     </div>
-   )
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 export default StudentList;
