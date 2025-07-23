@@ -22,7 +22,7 @@ const LoginForm = () => {
     const endpoint = 'http://localhost:3000/users';
 
     if (isLogin) {
-      const res = await fetch(`${endpoint}?email=${email}&password=${password}`);
+      const res = await fetch(${endpoint}?email=${email}&password=${password});
       const users = await res.json();
       if (users.length > 0) {
         localStorage.setItem('token', 'loggedin');
@@ -33,7 +33,7 @@ const LoginForm = () => {
       }
     } else {
       const newUser = { id: Date.now(), firstName, lastName, email, password };
-      const check = await fetch(`${endpoint}?email=${email}`);
+      const check = await fetch(${endpoint}?email=${email});
       const exists = await check.json();
       if (exists.length > 0) {
         alert('User already exists');
@@ -73,8 +73,29 @@ const LoginForm = () => {
             <br />
           </>
         )}
-       
-       
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <br />
+        <button type="submit">{isLogin ? 'Login' : 'Register'}</button>
+        <p>
+          {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
+          <button type="button" onClick={toggleForm}>
+            {isLogin ? 'Register' : 'Login'}
+          </button>
+        </p>
       </form>
     </div>
   );
