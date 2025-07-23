@@ -9,4 +9,11 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+const toggleForm = () => {
+    setIsLogin(!isLogin);
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPassword('');
+  };
 };
