@@ -11,5 +11,11 @@ const TeacherList = () => {
       .then((res) => res.json())
       .then(setTeachers);
   }, []);
+
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure you want to delete this teacher?")) {
+      fetch(`http:localhost:3000/teachers/${id}`, { method: 'DELETE' })
+        .then(() => setTeachers(teachers.filter((t) => t.id !== id)));
+    }
+  };
 };
-    
