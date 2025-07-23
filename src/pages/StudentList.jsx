@@ -33,6 +33,9 @@ const StudentList = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
         style={{ marginBottom: '10px', padding: '5px', width: '200px' }}
         />
+        <button onClick={() => navigate('/students/new')} style={{ marginLeft: '10px' }}>
+        Add Student
+      </button>
     </div>
    )
 }
