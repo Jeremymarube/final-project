@@ -17,5 +17,8 @@ const StudentList = () => {
         .then(() => setStudents(students.filter((s) => s.id !== id)));
     }
   };
+   const handleEdit = (id) => {
+    navigate(`/students/edit/${id}`);
+  };
 }
 export default StudentList;
