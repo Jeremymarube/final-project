@@ -20,7 +20,7 @@ const TeacherList = () => {
   };
 
     const handleEdit = (id) => {
-    navigate(/teachers/edit/`${id}`);
+    navigate(`/teachers/edit/${id}`);
   };
 
   const filteredTeachers = teachers.filter((teacher) =>
