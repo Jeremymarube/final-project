@@ -18,4 +18,12 @@ const TeacherList = () => {
         .then(() => setTeachers(teachers.filter((t) => t.id !== id)));
     }
   };
+
+    const handleEdit = (id) => {
+    navigate(/teachers/edit/`${id}`);
+  };
+
+  const filteredTeachers = teachers.filter((teacher) =>
+    teacher.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 };
