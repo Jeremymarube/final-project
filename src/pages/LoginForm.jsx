@@ -17,7 +17,7 @@ const toggleForm = () => {
     setPassword('');
   };
 
- const handleSubmit = async (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = 'http://localhost:3000/users';
 
@@ -31,7 +31,22 @@ const toggleForm = () => {
       } else {
         alert('Invalid email or password');
       }
-    } 
+    } else {
+      const newUser = { id: Date.now(), firstName, lastName, email, password };
+      const check = await fetch(`${endpoint}?email=${email}`);
+      const exists = await check.json();
+      if (exists.length > 0) {
+        alert('User already exists');
+        return;
+      }
+      await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newUser)
+      });
+      alert('Registration successful. You can now log in.');
+      setIsLogin(true);
+    }
+  };
 
- }
 }
