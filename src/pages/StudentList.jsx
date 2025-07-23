@@ -11,5 +11,11 @@ const StudentList = () => {
       .then((res) => res.json())
       .then(setStudents);
   }, []);
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure you want to delete this student?")) {
+      fetch(`http://localhost:3000/students/${id}`, { method: 'DELETE' })
+        .then(() => setStudents(students.filter((s) => s.id !== id)));
+    }
+  };
 }
 export default StudentList;
