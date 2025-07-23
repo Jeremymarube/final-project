@@ -29,6 +29,8 @@ const StudentList = () => {
     <input
         type="text"
         placeholder="Search by name..."
+         value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
         />
     </div>
    )
