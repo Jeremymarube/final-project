@@ -9,7 +9,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-const toggleForm = () => {
+  const toggleForm = () => {
     setIsLogin(!isLogin);
     setFirstName('');
     setLastName('');
@@ -17,7 +17,7 @@ const toggleForm = () => {
     setPassword('');
   };
 
-   const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = 'http://localhost:3000/users';
 
@@ -49,4 +49,34 @@ const toggleForm = () => {
     }
   };
 
-}
+  return (
+    <div style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
+      <h2>{isLogin ? 'Login' : 'Register'}</h2>
+      <form onSubmit={handleSubmit}>
+        {!isLogin && (
+          <>
+            <input
+              type="text"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+            />
+            <br />
+            <input
+              type="text"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+            <br />
+          </>
+        )}
+       
+      </form>
+    </div>
+  );
+};
+
+export default LoginForm;
