@@ -44,6 +44,7 @@ const StudentList = () => {
               <button onClick={() => handleEdit(student.id)} style={{ marginRight: '10px' }}>
                 Edit
               </button>
+               <button onClick={() => handleDelete(student.id)}>Delete</button>
     </div>
           </li>
         ))}
