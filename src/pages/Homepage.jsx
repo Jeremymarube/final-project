@@ -80,4 +80,3 @@ const DetailCard = ({ title, data, getLine }) => (
   </div>
 );
 
-export default Homepage;
