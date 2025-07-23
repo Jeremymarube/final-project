@@ -16,4 +16,10 @@ const toggleForm = () => {
     setEmail('');
     setPassword('');
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const endpoint = 'http://localhost:3000/users';
+
+  }
 };
