@@ -5,19 +5,19 @@ const Homepage = () => {
   const [teachers, setTeachers] = useState([]);
   const [classes, setClasses] = useState([]);
 };
-//   useEffect(() => {
-//     fetch('http://localhost:3000/students')
-//       .then(res => res.json())
-//       .then(setStudents);
+  useEffect(() => {
+    fetch('http://localhost:3000/students')
+      .then(res => res.json())
+      .then(setStudents);
 
-//     fetch('http://localhost:3000/teachers')
-//       .then(res => res.json())
-//       .then(setTeachers);
+    fetch('http://localhost:3000/teachers')
+      .then(res => res.json())
+      .then(setTeachers);
 
-//     fetch('http://localhost:3000/classes')
-//       .then(res => res.json())
-//       .then(setClasses);
-//   }, []);
+    fetch('http://localhost:3000/classes')
+      .then(res => res.json())
+      .then(setClasses);
+  }, []);
 
 //   return (
 //     <div style={{ padding: '30px' }}>
