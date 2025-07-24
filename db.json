@@ -68,32 +68,38 @@
     {
       "id": "1",
       "name": "Alice Brown",
-      "age": 12
+      "age": 12,
+      "classId": "1"
     },
     {
       "id": "2",
       "name": "Bob White",
-      "age": 13
+      "age": 13,
+      "classId": "1"
     },
     {
       "id": "3",
       "name": "Carlos Green",
-      "age": 11
+      "age": 11,
+      "classId": "2"
     },
     {
       "id": "a009",
       "name": "Asha",
-      "age": 23
+      "age": 23,
+      "classId": "2"
     },
     {
       "id": "b150",
       "name": "Joy",
-      "age": 17
+      "age": 17,
+      "classId": "1"
     },
     {
       "id": "83ad",
       "name": "Julius",
-      "age": 8
+      "age": 8,
+      "classId": "2"
     }
   ],
   "classes": [
@@ -101,13 +107,13 @@
       "id": "1",
       "name": "Grade 6",
       "room": "A1",
-      "teacherId": 1
+      "teacherId": "1"
     },
     {
       "id": "2",
       "name": "Grade 7",
       "room": "B2",
-      "teacherId": 2
+      "teacherId": "2"
     }
   ]
 }
