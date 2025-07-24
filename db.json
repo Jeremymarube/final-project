@@ -45,11 +45,25 @@
       "password": "4321"
     },
     {
-      "id": 1753338595238,
+      "id": "1753338595238",
       "firstName": "Jeremy",
       "lastName": "Mars",
       "email": "jeremy@gmail.com",
       "password": "4321"
+    },
+    {
+      "id": "1753358166913",
+      "firstName": "asha",
+      "lastName": "moha",
+      "email": "asha@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 1753374761452,
+      "firstName": "kira",
+      "lastName": "yusuf",
+      "email": "kira@gmail.com",
+      "password": "12345"
     }
   ],
   "teachers": [
@@ -69,13 +83,13 @@
       "id": "1",
       "name": "Alice Brown",
       "age": 12,
-      "classId": "1"
+      "classId": null
     },
     {
       "id": "2",
       "name": "Bob White",
       "age": 13,
-      "classId": "1"
+      "classId": null
     },
     {
       "id": "3",
@@ -93,22 +107,28 @@
       "id": "b150",
       "name": "Joy",
       "age": 17,
-      "classId": "1"
+      "classId": null
     },
     {
       "id": "83ad",
       "name": "Julius",
       "age": 8,
       "classId": "2"
+    },
+    {
+      "id": "67e8",
+      "name": "Maria",
+      "age": 11,
+      "classId": null
+    },
+    {
+      "id": "d10e",
+      "name": "Maria",
+      "age": 11,
+      "classId": null
     }
   ],
   "classes": [
-    {
-      "id": "1",
-      "name": "Grade 6",
-      "room": "A1",
-      "teacherId": "1"
-    },
     {
       "id": "2",
       "name": "Grade 7",
