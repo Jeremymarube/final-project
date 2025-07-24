@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Admin",
       "lastName": "User",
       "email": "admin@school.com",
@@ -9,7 +9,7 @@
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Jane",
       "lastName": "Doe",
       "email": "jane@school.com",
@@ -17,78 +17,103 @@
       "role": "teacher"
     },
     {
-      "id": 1753283347202,
+      "id": "1753283347202",
       "firstName": "Jeremy",
       "lastName": "Mars",
       "email": "jeremymarube@gmail.com",
       "password": "1234"
     },
     {
-      "id": 1753286451788,
+      "id": "1753286451788",
       "firstName": "Lauren",
       "lastName": "Ann",
       "email": "lauren@gmail.com",
       "password": "1234"
     },
     {
-      "id": 1753293816850,
+      "id": "1753293816850",
       "firstName": "Jeremy",
       "lastName": "Mars",
       "email": "jeremymars1@gmail.com",
+      "password": "4321"
+    },
+    {
+      "id": "1753309356733",
+      "firstName": "Jeremy",
+      "lastName": "Mars",
+      "email": "jeremymars@gmail.com",
+      "password": "4321"
+    },
+    {
+      "id": 1753338595238,
+      "firstName": "Jeremy",
+      "lastName": "Mars",
+      "email": "jeremy@gmail.com",
       "password": "4321"
     }
   ],
   "teachers": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Mr. Smith",
       "subject": "Mathematics"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ms. Johnson",
       "subject": "English"
     }
   ],
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Alice Brown",
-      "age": 12
+      "age": 12,
+      "classId": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Bob White",
-      "age": 13
+      "age": 13,
+      "classId": "1"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Carlos Green",
-      "age": 11
+      "age": 11,
+      "classId": "2"
     },
     {
       "id": "a009",
       "name": "Asha",
-      "age": 23
+      "age": 23,
+      "classId": "2"
     },
     {
       "id": "b150",
       "name": "Joy",
-      "age": 17
+      "age": 17,
+      "classId": "1"
+    },
+    {
+      "id": "83ad",
+      "name": "Julius",
+      "age": 8,
+      "classId": "2"
     }
   ],
   "classes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Grade 6",
       "room": "A1",
-      "teacherId": 1
+      "teacherId": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Grade 7",
       "room": "B2",
-      "teacherId": 2
+      "teacherId": "2"
     }
   ]
 }
