@@ -7,7 +7,7 @@ import StudentList from './pages/StudentList';
 import StudentForm from './pages/StudentForm';
 import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeacherForm';
-import ClassList from './pages/ClassList';
+import ClassList from './pages/ClassList'
 import ClassForm from './pages/ClassForm';
 import './index.css';
 
