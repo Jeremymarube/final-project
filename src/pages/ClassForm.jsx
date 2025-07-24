@@ -1,4 +1,3 @@
-// ClassForm.jsx
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -23,14 +22,18 @@ const ClassForm = () => {
         .then((data) => {
           setName(data.name);
           setRoom(data.room);
-          setTeacherId(data.teacherId);
+          setTeacherId(data.teacherId.toString());
         });
     }
-  }, [id]);
+  }, [id, isEdit]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const classObj = { name, room, teacherId: parseInt(teacherId) };
+    const classObj = {
+      name,
+      room,
+      teacherId: teacherId ? parseInt(teacherId) : null,
+    };
 
     const url = isEdit
       ? `http://localhost:3000/classes/${id}`
@@ -46,29 +49,44 @@ const ClassForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ padding: '20px' }}>
       <h2>{isEdit ? 'Edit' : 'Add'} Class</h2>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Class Name"
-        required
-      />
-      <input
-        value={room}
-        onChange={(e) => setRoom(e.target.value)}
-        placeholder="Room"
-        required
-      />
-      <select value={teacherId} onChange={(e) => setTeacherId(e.target.value)} required>
-        <option value="">Select Teacher</option>
-        {teachers.map((t) => (
-          <option key={t.id} value={t.id}>
-            {t.name}
-          </option>
-        ))}
-      </select>
-      <button type="submit">Save</button>
+
+      <div style={{ marginBottom: '10px' }}>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Class Name"
+          required
+          style={{ marginRight: '10px' }}
+        />
+        <input
+          value={room}
+          onChange={(e) => setRoom(e.target.value)}
+          placeholder="Room"
+          required
+        />
+      </div>
+
+      <div style={{ marginBottom: '10px' }}>
+        <select
+          value={teacherId}
+          onChange={(e) => setTeacherId(e.target.value)}
+          required
+        >
+          <option value="">Select Teacher</option>
+          {teachers.map((t) => (
+            <option key={t.id} value={t.id}>
+              {t.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <button type="submit" style={{ marginRight: '10px' }}>Save</button>
+        <button type="button" onClick={() => navigate('/classes')}>Cancel</button>
+      </div>
     </form>
   );
 };
