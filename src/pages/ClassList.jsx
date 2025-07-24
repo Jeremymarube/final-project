@@ -7,11 +7,11 @@ const ClassList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/classes")
+    fetch("https://school-system-api-sl8o.onrender.com/classes")
       .then((res) => res.json())
       .then(setClasses);
 
-    fetch("http://localhost:3000/teachers")
+    fetch("https://school-system-api-sl8o.onrender.com/teachers")
       .then((res) => res.json())
       .then(setTeachers);
   }, []);
@@ -23,7 +23,7 @@ const ClassList = () => {
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this class?")) {
-      fetch(`http://localhost:3000/classes/${id}`, { method: 'DELETE' })
+      fetch(`https://school-system-api-sl8o.onrender.com/classes/${id}`, { method: 'DELETE' })
         .then(() => setClasses(classes.filter((c) => c.id !== id)));
     }
   };

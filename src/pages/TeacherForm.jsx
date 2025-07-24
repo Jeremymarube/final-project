@@ -10,7 +10,7 @@ const TeacherForm = () => {
 
   useEffect(() => {
     if (isEdit) {
-      fetch(`http://localhost:3000/teachers/${id}`)
+      fetch(`https://school-system-api-sl8o.onrender.com/teachers/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setName(data.name);
@@ -24,8 +24,8 @@ const TeacherForm = () => {
     const teacher = { name, subject };
 
     const url = isEdit
-      ? `http://localhost:3000/teachers/${id}`
-      : "http://localhost:3000/teachers";
+      ? `https://school-system-api-sl8o.onrender.com/teachers/${id}`
+      : "https://school-system-api-sl8o.onrender.com/teachers";
 
     const method = isEdit ? 'PATCH' : 'POST';
 

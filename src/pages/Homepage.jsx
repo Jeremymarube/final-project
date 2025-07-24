@@ -6,15 +6,15 @@ const Homepage = () => {
   const [classes, setClasses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/students')
+    fetch('https://school-system-api-sl8o.onrender.com/students')
       .then(res => res.json())
       .then(setStudents);
 
-    fetch('http://localhost:3000/teachers')
+    fetch('https://school-system-api-sl8o.onrender.com/teachers')
       .then(res => res.json())
       .then(setTeachers);
 
-    fetch('http://localhost:3000/classes')
+    fetch('https://school-system-api-sl8o.onrender.com/classes')
       .then(res => res.json())
       .then(setClasses);
   }, []);

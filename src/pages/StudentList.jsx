@@ -9,19 +9,19 @@ const StudentList = () => {
 
   useEffect(() => {
     // Fetch students
-    fetch("http://localhost:3000/students")
+    fetch("https://school-system-api-sl8o.onrender.com/students")
       .then((res) => res.json())
       .then(setStudents);
 
     // Fetch classes
-    fetch("http://localhost:3000/classes")
+    fetch("https://school-system-api-sl8o.onrender.com/classes")
       .then((res) => res.json())
       .then(setClasses);
   }, []);
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
-      fetch(`http://localhost:3000/students/${id}`, { method: 'DELETE' })
+      fetch(`https://school-system-api-sl8o.onrender.com/students/${id}`, { method: 'DELETE' })
         .then(() => setStudents((prev) => prev.filter((s) => s.id !== id)));
     }
   };

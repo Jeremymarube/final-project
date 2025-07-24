@@ -13,13 +13,13 @@ const StudentForm = () => {
 
   useEffect(() => {
     // Fetch all classes for the select dropdown
-    fetch('http://localhost:3000/classes')
+    fetch('https://school-system-api-sl8o.onrender.com/classes')
       .then((res) => res.json())
       .then(setClasses);
 
     // If editing, load student data
     if (isEdit) {
-      fetch(`http://localhost:3000/students/${id}`)
+      fetch(`https://school-system-api-sl8o.onrender.com/students/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setName(data.name);
@@ -39,8 +39,8 @@ const StudentForm = () => {
     };
 
     const url = isEdit
-      ? `http://localhost:3000/students/${id}`
-      : 'http://localhost:3000/students';
+      ? `https://school-system-api-sl8o.onrender.com/students/${id}`
+      : 'https://school-system-api-sl8o.onrender.com/students';
 
     const method = isEdit ? 'PATCH' : 'POST';
 

@@ -45,11 +45,18 @@
       "password": "4321"
     },
     {
-      "id": 1753338595238,
+      "id": "1753338595238",
       "firstName": "Jeremy",
       "lastName": "Mars",
       "email": "jeremy@gmail.com",
       "password": "4321"
+    },
+    {
+      "id": "1753354399783",
+      "firstName": "Jere",
+      "lastName": "Mars",
+      "email": "jere@gmail.com",
+      "password": "5432"
     }
   ],
   "teachers": [
@@ -93,12 +100,6 @@
       "id": "b150",
       "name": "Joy",
       "age": 17,
-      "classId": "1"
-    },
-    {
-      "id": "83ad",
-      "name": "Julius",
-      "age": 8,
       "classId": "2"
     }
   ],

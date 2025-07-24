@@ -19,7 +19,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const endpoint = 'http://localhost:3000/users';
+    const endpoint = 'https://school-system-api-sl8o.onrender.com/users';
 
     if (isLogin) {
       const res = await fetch(`${endpoint}?email=${email}&password=${password}`);
