@@ -45,11 +45,18 @@
       "password": "4321"
     },
     {
-      "id": 1753338595238,
+      "id": "1753338595238",
       "firstName": "Jeremy",
       "lastName": "Mars",
       "email": "jeremy@gmail.com",
       "password": "4321"
+    },
+    {
+      "id": 1753352527231,
+      "firstName": "Julius",
+      "lastName": "Kedienye",
+      "email": "juliuskedienye61@gmail.com",
+      "password": "1234"
     }
   ],
   "teachers": [
